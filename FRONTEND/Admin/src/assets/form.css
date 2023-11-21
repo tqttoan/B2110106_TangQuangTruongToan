@@ -1,0 +1,135 @@
+.authenticate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+.authenticate__form {
+  border: 1px solid rgb(223, 224, 228);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+
+.form h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 60px 0 50px;
+}
+
+.authenticate__form-group {
+  margin-bottom: 30px;
+}
+
+.form-box {
+  position: relative;
+}
+
+.authenticate__form-input {
+  border: 0;
+  outline: none;
+  background: #fff;
+  border: 1px solid rgb(223, 224, 228);
+  border-radius: 5px;
+  padding: 10px;
+  height: 55px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.authenticate__form-group .authenticate__form-input:focus {
+  border: 3px solid rgb(26, 115, 232);
+}
+
+.authenticate__form-group .authenticate__form-input + label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  padding: 0 5px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  color: rgb(155, 157, 161);
+  font-size: 1.2rem;
+  font-weight: 450;
+  pointer-events: none;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-check-input {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.authenticate__form-group .authenticate__form-input:focus + label,
+.authenticate__form-group .authenticate__form-input:valid + label {
+  top: 0;
+  color: rgb(26, 115, 232);
+  font-size: 1rem;
+  font-weight: 400;
+  background: #fff;
+}
+
+.authenticate__form-submit {
+  border: 0;
+  outline: none;
+  background: rgb(26, 115, 232);
+  border-radius: 12px;
+  width: 45%;
+  height: 45px;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.authenticate__form-submit:hover {
+  background: rgb(22, 1, 249);
+}
+
+.authenticate__render {
+  margin-top: 25px;
+  font-size: 1.05rem;
+}
+
+.authenticate__render span {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.authenticate__link {
+  text-decoration: none;
+  background: transparent;
+  color: rgb(33, 20, 182);
+  font-weight: 500;
+}
+
+.authenticate__link:hover {
+  color: rgb(20, 3, 250);
+  font-size: 1.1rem;
+}
+
+.authenticate__form-group:has(.error-feedback)
+  .form-box
+  .authenticate__form-input {
+  border: 2px solid red;
+}
+
+.authenticate__form-group:has(.error-feedback)
+  .form-box
+  .authenticate__form-input:focus
+  + label,
+.authenticate__form-group:has(.error-feedback)
+  .form-box
+  .authenticate__form-input:valid
+  + label {
+  color: red;
+}
+
+.error-feedback {
+  color: red;
+  display: flex;
+  margin-top: 3px;
+}
